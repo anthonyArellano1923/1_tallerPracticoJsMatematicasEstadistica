@@ -11,14 +11,14 @@ function getDiscount(){
   let discount = inputDiscount.value
   let discountedPrice = (originalPrice * (100 - discount)) / 100
 
-  if (originalPrice && discount && discount > 0 && discount <= 100) {
+  if (originalPrice && discount && discount > 0 && discount < 100) {
     discountedSpan.innerText = discountedPrice
     clearButton.style.display = "inline-block"
   } else if ( discount > 100 || discount < 0) {
-    discountedSpan.innerText = 'Descuento debe ser mayor a 0 y menor o igual a 100%'
+    discountedSpan.innerText = 'The discount must be higher than 0% And no bigger than 100%'
   } 
   else {
-    discountedSpan.innerText = 'Debe colocar tanto Precio como el descuento aplicado'
+    discountedSpan.innerText = 'You have to type both original price and discount to apply. Discount mnust not be 100%'
   }
   
 }

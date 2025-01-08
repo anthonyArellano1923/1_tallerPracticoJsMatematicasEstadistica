@@ -13,10 +13,18 @@
   </header>
   <main>
     <section>
-      <input id="original-price" type="number" placeholder="100$">
-      <span>$</span>
-      <input id="discount" type="number" placeholder="10%">
-      <span>%</span>
+
+      <form id="user-input" action="#">
+        <label for="original-price">Original Price</label>
+        <input id="original-price" type="number" placeholder="100">
+        <span>$</span>
+        <br>
+        <label for="discount">Discount to apply</label>
+        <input id="discount" type="number" placeholder="10">
+        <span>%</span>
+      </form>
+
+      
 
       <p>Discounted price: <span id="discounted-price"></span></p>
       <button id="claculate-button">Calculate</button>
