@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cupons!</title>
+</head>
+<body>
+  <header>
+    <h1>Calculating discounts with cupons!</h1>
+    <p>Pick a cupon and get your discount.</p>
+  </header>
+  <main>
+    <form action="#">
+      <label for="price">Original price:</label>
+      <input id="price" type="number" placeholder="100">
+    </form>
+    <div class="availibleCupons">
+      <button id="discount-10">Winter discount!</button>
+      <button id="discount-25">Ashen-one discount!</button>
+      <button id="discount-20">Tarnished discount!</button>
+      <button id="discount-15">Demi-god discount!</button>
+    </div>
+    <p id="priceDiscounted"></p>
+    <script src="./copunsDiscount.js"></script>
+  </main>
+</body>
+</html>
