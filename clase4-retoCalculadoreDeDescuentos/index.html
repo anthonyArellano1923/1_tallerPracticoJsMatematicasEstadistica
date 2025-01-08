@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discounts</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
+    <h1>Discounts Calculator</h1>
+    <p>Get your prices here and we will do the boring maths!</p>
+  </header>
+  <main>
+    <section>
+      <input id="original-price" type="number" placeholder="100$">
+      <span>$</span>
+      <input id="discount" type="number" placeholder="10%">
+      <span>%</span>
+
+      <p>Discounted price: <span id="discounted-price"></span></p>
+      <button id="claculate-button">Calculate</button>
+      <button id="clear-button" style="display: none;">Clear</button>
+
+    </section>
+  </main>
+  <script src="./index.js"></script>
+</body>
+</html>
