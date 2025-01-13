@@ -24,8 +24,6 @@ function calculateMedian(usersList){
 }
 
 
-
-
 function calculateMode(usersList) {
   const objectCounter = {}
 
