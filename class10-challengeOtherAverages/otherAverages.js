@@ -43,6 +43,32 @@ function average(object) {
   return 'Average: ' +  average
 }
 
+function cuadraticAverage(list) {
+  const cuadraticValues = list.map((element) => element**2)
+  const dataSum = cuadraticValues.reduce((sum = 0, newValue) => sum + newValue)
+  const cuadraticAverage = Math.sqrt(dataSum / list.length)
+  
+  return 'Cuadratic Average: ' + cuadraticAverage
+}
+
+function meanSquaredError(list){
+  const [mesured, predicted] = list
+  const calculateErrors = mesured.map((value, index) => value - predicted[index])
+  const cuadraticErrors = calculateErrors.map((element) => element**2) //y^2
+  const sumErrors = cuadraticErrors.reduce((sum = 0, newVlue) => sum + newVlue)
+  const mSE = sumErrors / list[0].length
+
+  return 'Mean squared error: ' + mSE
+}
+
+function harmonicMean(list){
+  const inverseVelocity = list.map((velocity) => 1 / velocity)
+  const sumVelocity = inverseVelocity.reduce((sum = 0, newValue) => sum + newValue)
+  const harmonicMean = list.length / sumVelocity
+
+  return 'Harmonic Average: ' + harmonicMean
+}
+
 const notes = [
   {
       course: "Educación Física",
@@ -60,3 +86,10 @@ const notes = [
       credit: 5,
   },
 ];
+
+const currents = [2.5, 3.0, 3.5, 4.0, 4.5] //Cuadratic Average = 3.57 A
+const errorValues = [[3, 4.5, 6, 8.5, 10], [2.8, 4.7, 6.2, 8.3, 9.8]] // [messured][predicted], MSE=0.04
+const signal = [-0.5, 0.8, -0.7, 1.0, -0.6] //cuadratic average 0.74
+const velocity = [60, 80, 100]
+
+
