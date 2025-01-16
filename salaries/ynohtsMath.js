@@ -79,7 +79,7 @@ YnohtsMath.calculateMedian = function (usersList) {
 
   if (isEven) {
     const centralElements = [list[listIndex - 1], list[listIndex]];
-    return YnohtsMath.average(centralElements);
+    return 'Median' + YnohtsMath.average(centralElements);
   } else {
     return 'Median: ' + list[listIndex];
   }
@@ -103,4 +103,3 @@ YnohtsMath.calculateMode = function (usersList) {
   return 'Mode: ' + mode;
 };
 
-console.log(YnohtsMath)
