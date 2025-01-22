@@ -76,7 +76,7 @@ function selfCompaniesAnalysis(workers){
 }
 
 function getCompaniesInfo(workers) {
-  let companies = {}
+  let companies = []
   workers.forEach(person => {
     person.trabajos.forEach(job => {
       if (!companies[job.empresa]) {
@@ -105,3 +105,19 @@ function yearlyCompanySalaryMedian(company, year) {
   }
 }
 
+function companyRangeSalaryProjection(companyName){
+  const lowerSalaries = []
+  const higherSalaries = []
+  if(companies[companyName]){
+    const companyToEvaluate = companies[companyName]
+    Object.values(companyToEvaluate).forEach(year => {
+      year.sort((x,y) => - y + x)
+      lowerSalaries.push(year[0])
+      higherSalaries.push(year[year.length - 1])
+    })
+    const rangeProjection = [YnohtsMath.calculateMedian(lowerSalaries), YnohtsMath.calculateMedian(higherSalaries)]
+    return rangeProjection
+  } else {
+    return `La empresa ${companyName} no se encuentra en la base de datos.`
+  }
+}

@@ -38,7 +38,7 @@ YnohtsMath.calculateCircle = function (radious) { // Requires the radious of the
   return { diameter, circleCircumference: diameter * Math.PI, circleArea: Math.pow(radious, 2) * Math.PI }
 }
 
-YnohtsMath.average = function (list) {
+YnohtsMath.calculateAverage = function (list) {
   return list.reduce((sum, newValue) => sum + newValue, 0) / list.length;
 }
 
